@@ -1,4 +1,4 @@
-(defproject test-proj "0.1.2-SNAPSHOT"
+(defproject test-proj "0.1.2"
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
@@ -7,7 +7,7 @@
   :release-tasks [["change" "version"
                    "leiningen.release/bump-version" "release"]
                   ["vcs" "commit"]
-                  ["vcs" "tag"]
+                  ["vcs" "tag" {:prefix "release"}]
                   ["change" "version" "leiningen.release/bump-version"]
                   ["vcs" "commit"]
                   ["vcs" "push"]])
